@@ -21,7 +21,7 @@ and use ref.po's translations.")
            OUT is '-'.")
     USAGE_REPORT=$(eval_gettext "Please report bugs to <$GitURL>.")
     
-    echo -ne "$USAGE_DESC\n$USAGE\n$USAGE_COMOPT\n$USAGE_REPORT"
+    echo -ne "$USAGE_DESC\n$USAGE\n$USAGE_COMOPT\n$USAGE_REPORT\n"
 }
 
 
