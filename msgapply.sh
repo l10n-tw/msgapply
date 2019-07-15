@@ -63,7 +63,10 @@ msgcat --use-first -o "$tmpdir/${def_bn}.step2" "$ref" "$tmpdir/${def_bn}.step1"
 # Third Step: Remove the strings which is added from ref.po (Just preserve def.po's).
 msgcomm -o "$out" "$tmpdir/${def_bn}.step2" "$def"
 
-# Fourth Step: Done.
+# Forth step: remove the useless ^M characters.
+sed -ie "s/\r//g" "$out"
+
+# Fivth Step: Done.
 if [[ "$tmpdir" == "" ]]
 then
     echo $(eval_gettext "Program ERROR: Variable 'TMPDIR' isn't exist.
