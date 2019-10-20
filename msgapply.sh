@@ -64,7 +64,7 @@ msgcat --use-first -o "$tmpdir/${def_bn}.step2" "$ref" "$tmpdir/${def_bn}.step1"
 msgcomm -o "$out" "$tmpdir/${def_bn}.step2" "$def"
 
 # Forth step: remove the useless ^M characters.
-sed -ie "s/\r//g" "$out"
+sed -i -e "s/\r//g" "$out"
 
 # Fivth Step: Done.
 if [[ "$tmpdir" == "" ]]
